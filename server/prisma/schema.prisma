@@ -1,0 +1,34 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  guilds    Guild[]
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Guild {
+  createdAt DateTime      @default(now())
+  id        String        @id @default(cuid())
+  members   User[]
+  name      String?
+  type      EnumGuildType
+  updatedAt DateTime      @updatedAt
+}
+
+enum EnumGuildType {
+  Flat
+  Group
+}
