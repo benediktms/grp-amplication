@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.11.1",
+  "appInfo": {
+    "name": "grp-amplication",
+    "description": "",
+    "version": "400ce63n",
+    "id": "ckyuaq1i2118958001s6lxxcv00v",
+    "url": "https://app.amplication.com/ckyuaq1i2118958001s6lxxcv00v",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "grp-amp",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "ckyuaq1i2118958001s6lxxcv00v",
+      "authProvider": "Jwt"
+    }
+  }
+}
